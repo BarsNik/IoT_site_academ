@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+input{
+    text-decoration: underline;
+  background-color:transparent;
+  border:0;
+  padding:0;
+  outline:0;
+  user-select:text;
+  color: white;
+}
+
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 10px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #7553ff80;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #9c84ff;
+    transition: .2s ease-in-out;
+}
+.shine-button:before, .shine-button-r:before/*, /*.shine-button-r2:before, .shine-button-in:before*/{
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 80px;
+    width: 40px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+.shine-button:hover, .shine-button-r:hover, .shine-button-r2:hover, .shine-button-in:hover {
+     background: #7553ff;
+     color: #fff;
+}
+.shine-button:hover:before, .shine-button-r:hover:before, .shine-button-r2:hover:before, .shine-button-in:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+.shine-button-r {
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px 16px;
+    margin: 2px 2px;
+    position: relative;
+    overflow: hidden;
+    border: 0px solid #7553ff80;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    color: #9c84ff;
+    transition: .2s ease-in-out;
+}
+
+.shine-button-in {
+    float: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 56px;
+    margin: 1px 2px;
+    position: relative;
+    overflow: hidden;
+    border: 0px solid #7553ff80;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    color: #9c84ff;
+    transition: .2s ease-in-out;
+}
+
+.shine-button-r2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 8px;
+    margin: 2px 2px;
+    position: relative;
+    overflow: hidden;
+    border: 0px solid #7553ff80;
+    border-radius: 6px;
+    font-family: 'Montserrat', sans-serif;
+    color: #9c84ff;
+    /*transition: .2s ease-in-out;*/
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Стиль заголовка */
+.header {
+    background-color: #1e2f771a;
+    padding: 10px; /*внешний отступ*/
+    text-align: center;
+}
+
+/* Стиль верхней панели навигации */
+.topnav {
+    color: white;
+    overflow: hidden;
+    background-color: #4669ff14;
+}
+
+/* Стиль верхних навигационных ссылок */
+.topnav a {
+    color: white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+}
+
+/* Изменение цвета при наведении */
+.topnav a:hover {
+    background-color: #4d3e96;
+     background: #7553ff;
+     color: #fff;
+}
+
+/* Создайте три одинаковых столбца, которые плавают рядом друг с другом */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Левый и правый столбец */
+.column.side {
+    width: 22%;
+}
+
+/* Средний столбец */
+.column.middle {
+    width: 56%;
+}
+
+/* Очистить поплавки после колонн */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ya_map {
+	font-family: arial;
+	font-size: 12px;
+	color: #454545;
+}
+
+#map {
+	width: 540px;
+	height: 450px;
+}
+
+/* Отзывчивый макет - делает три колонки стек поверх друг друга, а не рядом друг с другом */
+@media screen and (max-width: 1000px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+
+/* Стиль нижнего колонтитула */
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+}
+
